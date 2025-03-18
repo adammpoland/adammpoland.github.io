@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: dimgray;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body fills viewport height */
+}
+
+.navbar {
+    background-color: pink;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; /* Increase padding for better spacing */
+    box-sizing: border-box;
+    border-radius: 10px; /* Rounded navbar edges */
+}
+
+.navbar-brand {
+    color: black;
+    font-size: 50px; /* Larger font size */
+    font-weight: bold;
+}
+
+.navbar-subtitle {
+    color: black;
+    font-size: 28px; /* Larger font size */
+    font-weight: bold;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Occupies 80% of the viewport height */
+    overflow: hidden;
+    border-radius: 10px; /* Rounded edges for the banner container */
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the banner container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    display: block;
+}
+.content-container-right {
+    background-color: pink; /* Match the content-container background */
+    color: white;
+    width: 100%; /* Full width */
+    padding: 40px; /* Add padding */
+    border-radius: 10px; /* Rounded edges to match */
+    box-sizing: border-box; /* Include padding in size calculation */
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.banner-text-container {
+    border-radius: 10px; /* Rounded edges for text container */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.8);
+    color: white;
+    padding: 20px; /* Reduced padding */
+    border-radius: 10px;
+    text-align: center;
+    width: 60%; /* Reduced width */
+    max-width: 400px; /* Cap the size for larger screens */
+}
+
+.banner-text {
+    font-size: 24px; /* Smaller text */
+    font-weight: bold;
+    color: white;
+
+}
+
+.content {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    padding: 40px 0; /* Add vertical padding */
+    width: 100%;
+}
+.content-container {
+    background-color: pink; /* Same background color */
+    color: white;
+    height: auto; /* Allow the height to adjust based on content */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for child stacking */
+    flex-direction: column; /* Stack child divs vertically */
+    justify-content: center; /* Center child divs vertically */
+    align-items: center; /* Center child divs horizontally */
+    padding: 40px; /* Add padding inside the container */
+    box-sizing: border-box; /* Include padding in size calculation */
+    font-size: 18px; /* Larger font size for readability */
+    line-height: 1.6;
+    border-radius: 10px; /* Rounded edges */
+    gap: 20px; /* Add spacing between stacked children */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+    .content-container > div,
+    .content-container-right > div {
+        width: 80%; /* Maintain consistent width for child divs */
+        max-width: 1200px;
+        padding: 20px; /* Add padding */
+        background-color: white; /* Contrast background for visibility */
+        color: black; /* Black text for readability */
+        border-radius: 10px; /* Rounded edges */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+.button {
+    display: inline-block;
+    padding: 15px 30px; /* Adjust button size */
+    font-size: 18px; /* Increase font size */
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: hotpink;
+    border: none;
+    border-radius: 5px;
+    width: 250px; /* Wider buttons */
+}
+
+    .button:hover {
+        background-color: gray;
+    }
+
+    .button:active {
+        background-color: hotpink;
+        transform: translateY(4px);
+    }
+
+.centerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Fill the viewport */
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 36px; /* Adjust for smaller screens */
+    }
+
+    .navbar-subtitle {
+        font-size: 20px;
+    }
+
+    .banner-text {
+        font-size: 18px; /* Adjust for smaller screens */
+    }
+
+    .banner-text-container {
+        width: 80%; /* Allow more room on smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .content-container > div {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .button {
+        width: 100%; /* Full-width buttons */
+    }
+}
