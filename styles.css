@@ -7,6 +7,10 @@ body {
     min-height: 100vh; /* Ensure body fills viewport height */
 }
 
+
+.hidden {
+    display: none;
+}   
 .navbar {
     background-color: pink;
     width: 100%;
